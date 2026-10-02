@@ -230,6 +230,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-variant: all-small-caps;
 }
 
 .telemetry-item {
@@ -431,6 +432,7 @@ html, body {
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
+  height: 1.2rem;
 }
 
 .typed-cursor {
@@ -849,14 +851,14 @@ html, body {
 
 .card-floating-badge.badge-left {
   top: 10%;
-  left: -14px;
-  transform: translateZ(55px);
+  left: -63px;
+    transform: translateZ(4rem);
 }
 
 .card-floating-badge.badge-right {
-  bottom: 15%;
-  right: -14px;
-  transform: translateZ(65px);
+  bottom: 6%;
+    right: -60px;
+    transform: translateZ(50px);
 }
 
 .card-floating-badge i {
@@ -878,7 +880,7 @@ html, body {
   letter-spacing: 0.04em;
   color: #fff;
   margin-bottom: 2px;
-  transform: translateZ(25px);
+  transform: translateZ(6rem);
 }
 
 .card-author-title {
@@ -887,7 +889,7 @@ html, body {
   color: var(--primary-color);
   letter-spacing: 0.05em;
   margin-bottom: 6px;
-  transform: translateZ(18px);
+  transform: translateZ(30px);
 }
 
 .card-location {
@@ -902,7 +904,7 @@ html, body {
   border-radius: 10px;
   border: 1px solid var(--border-subtle);
   margin-bottom: 8px;
-  transform: translateZ(12px);
+  transform: translateZ(15px);
 }
 
 /* Card Skills Telemetry Progress Bars */
@@ -924,7 +926,7 @@ html, body {
 }
 
 .skill-row:nth-child(1) {
-  transform: translateZ(12px);
+  transform: translateZ(30px);
 }
 
 .skill-row:nth-child(2) {
@@ -932,7 +934,7 @@ html, body {
 }
 
 .skill-row:nth-child(3) {
-  transform: translateZ(28px);
+  transform: translateZ(35px);
 }
 
 .skill-info {
@@ -1011,21 +1013,22 @@ html, body {
 /* Bottom Telemetry Ticker */
 .hud-ticker-footer {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 90;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4px 24px;
-  height: 28px;
-  background: rgba(3, 7, 18, 0.92);
-  border-top: 1px solid var(--border-subtle);
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  color: var(--text-muted);
-  backdrop-filter: blur(8px);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 90;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 24px;
+    height: 20px;
+    background: rgba(3, 7, 18, 0.92);
+    border-top: 1px solid var(--border-subtle);
+    font-family: var(--font-mono);
+    font-size: 0.52rem;
+    color: var(--text-muted);
+    backdrop-filter: blur(8px);
+}
 }
 
 .ticker-left {
@@ -1256,12 +1259,12 @@ html, body {
   }
 
   .card-floating-badge.badge-left {
-    left: -8px;
+    left: -60px;
     top: 6%;
   }
 
   .card-floating-badge.badge-right {
-    right: -8px;
+    right: -65px;
     bottom: 12%;
   }
 
@@ -1298,10 +1301,14 @@ html, body {
   .hero-intel {
     order: 2;
     width: 100%;
-    align-items: center;
+    /* align-items: center; */
     text-align: center;
     gap: 6px;
   }
+  @media (max-width: 900px) {
+    .hero-intel>.hero-summary {
+      align-self: anchor-center;
+    }
 
   .cyber-badge {
     padding: 2px 8px;
@@ -1319,7 +1326,7 @@ html, body {
 
   .hero-roles {
     font-size: 0.82rem;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 4px;
   }
 
@@ -1328,11 +1335,12 @@ html, body {
     line-height: 1.38;
     max-width: 320px;
   }
+  
 
   .hero-tech-pills {
     justify-content: center;
-    gap: 4px;
-    margin-top: 1px;
+            gap: 4px;
+            margin-top: 1px;
   }
 
   .tech-pill {
@@ -1341,13 +1349,15 @@ html, body {
   }
 
   .hero-cta-group {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-    width: 100%;
-    margin-top: 2px;
+                display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+            width: 100%;
+            margin-top: 2px;
+            text-wrap: nowrap;
+            align-items: stretch;
   }
 
   .btn-cyber-primary, .btn-cyber-secondary, .btn-cyber-ghost {
@@ -1394,7 +1404,14 @@ html, body {
   }
 
   .hud-telemetry-bar {
-    display: none;
+    align-items: flex-start;
+            text-wrap-mode: nowrap;
+            flex-direction: column;
+            width: 5rem;
+            position: absolute;
+            top: 3rem;
+            left: 0.1rem;
+            font-variant-caps: all-petite-caps;
   }
 
   .hud-actions {
